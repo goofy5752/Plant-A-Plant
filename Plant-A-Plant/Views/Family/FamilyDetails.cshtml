@@ -1,0 +1,9 @@
+﻿@model IEnumerable<FamilyDetailsViewModel>
+@{
+    ViewData["Title"] = "FamilyDetails";
+}
+
+@foreach (var item in Model)
+{
+    <div>@item.Id - @item.Description</div>
+}
