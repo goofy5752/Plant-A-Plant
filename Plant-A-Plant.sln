@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plant-A-Plant.Web", "Plant-A-Plant.Web\Plant-A-Plant.Web.csproj", "{D2B58505-4F74-4935-8376-B64C4DD0799F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plant-A-Plant.Web", "D:\Programming\Software University\Plant-A-Plant\Web\Plant-A-Plant.Web\Plant-A-Plant.Web.csproj", "{D2B58505-4F74-4935-8376-B64C4DD0799F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{F1C9999F-5BE1-4CB7-8AF8-7FDD846A75D0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plant-A-Plant.Data", "Plant-A-Plant.Data\Plant-A-Plant.Data.csproj", "{D1A04B63-1A12-4065-A74D-576C5FBE1ACF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plant-A-Plant.Data", "D:\Programming\Software University\Plant-A-Plant\Data\Plant-A-Plant.Data\Plant-A-Plant.Data.csproj", "{D1A04B63-1A12-4065-A74D-576C5FBE1ACF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plant-A-Plant.Data.Common", "Plant-A-Plant.Data.Common\Plant-A-Plant.Data.Common.csproj", "{2FC5A254-4BAF-48A9-ABBE-79B1C36AEACF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plant-A-Plant.Data.Common", "D:\Programming\Software University\Plant-A-Plant\Data\Plant-A-Plant.Data.Common\Plant-A-Plant.Data.Common.csproj", "{2FC5A254-4BAF-48A9-ABBE-79B1C36AEACF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plant-A-Plant.Data.Models", "Plant-A-Plant.Data.Models\Plant-A-Plant.Data.Models.csproj", "{1AFEC034-0791-447B-925A-BD115F609A03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plant-A-Plant.Data.Models", "D:\Programming\Software University\Plant-A-Plant\Data\Plant-A-Plant.Data.Models\Plant-A-Plant.Data.Models.csproj", "{1AFEC034-0791-447B-925A-BD115F609A03}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{F2B3C871-807F-488D-B974-DBB2DC89D44B}"
 EndProject
@@ -19,11 +19,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{7E81AD33-BF7
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plant-A-Plant.Common", "Plant-A-Plant.Common\Plant-A-Plant.Common.csproj", "{9E9CB546-CE37-43D1-8E23-0251C1248462}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plant-A-Plant.Services.Mapping", "Plant-A-Plant.Services.Mapping\Plant-A-Plant.Services.Mapping.csproj", "{B967FF5F-5076-4F86-A203-D92EBF059319}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plant-A-Plant.Services.Mapping", "D:\Programming\Software University\Plant-A-Plant\Services\Plant-A-Plant.Services.Mapping\Plant-A-Plant.Services.Mapping.csproj", "{B967FF5F-5076-4F86-A203-D92EBF059319}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plant-A-Plant.Services.Data", "Plant-A-Plant.Services.Data\Plant-A-Plant.Services.Data.csproj", "{56846EEC-9C1D-4F8C-B103-BAC391DE2821}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plant-A-Plant.Services.Data", "D:\Programming\Software University\Plant-A-Plant\Services\Plant-A-Plant.Services.Data\Plant-A-Plant.Services.Data.csproj", "{56846EEC-9C1D-4F8C-B103-BAC391DE2821}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plant-A-Plant.ViewModels", "Plant-A-Plant.ViewModels\Plant-A-Plant.ViewModels.csproj", "{A618CE20-E4E4-4110-9AC8-41775E786F71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plant-A-Plant.ViewModels", "D:\Programming\Software University\Plant-A-Plant\Web\Plant-A-Plant.ViewModels\Plant-A-Plant.ViewModels.csproj", "{A618CE20-E4E4-4110-9AC8-41775E786F71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

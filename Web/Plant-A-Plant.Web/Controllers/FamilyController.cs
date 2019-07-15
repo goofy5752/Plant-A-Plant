@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Plant_A_Plant.Services.Data.Families.Contracts;
 using Plant_A_Plant.ViewModels.Families;
 
-namespace Plant_A_Plant.Controllers
+namespace Plant_A_Plant.Web.Controllers
 {
     public class FamilyController : Controller
     {

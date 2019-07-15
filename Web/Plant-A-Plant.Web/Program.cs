@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace Plant_A_Plant
+namespace Plant_A_Plant.Web
 {
     public class Program
     {

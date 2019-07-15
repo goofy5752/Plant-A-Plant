@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Plant-A-Plant.Data.Models\Plant-A-Plant.Data.Models.csproj" />
-    <ProjectReference Include="..\Plant-A-Plant.Services.Mapping\Plant-A-Plant.Services.Mapping.csproj" />
+    <ProjectReference Include="..\..\Data\Plant-A-Plant.Data.Models\Plant-A-Plant.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Services\Plant-A-Plant.Services.Mapping\Plant-A-Plant.Services.Mapping.csproj" />
   </ItemGroup>
 
 </Project>

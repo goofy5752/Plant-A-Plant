@@ -4,6 +4,7 @@ namespace Plant_A_Plant.ViewModels.Plants
 {
     using System;
     using Data.Models;
+    using Plant_A_Plant.Data.Models;
     using Services.Mapping;
 
     public class CreatePlantViewModel : IMapFrom<Plant>

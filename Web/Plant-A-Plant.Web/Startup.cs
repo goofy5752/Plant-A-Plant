@@ -1,25 +1,25 @@
 ﻿using System.Reflection;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Plant_A_Plant.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Plant_A_Plant.Data;
 using Plant_A_Plant.Data.Common.Repositories;
 using Plant_A_Plant.Data.Models;
 using Plant_A_Plant.Data.Repositories;
 using Plant_A_Plant.Services.Data.Families;
 using Plant_A_Plant.Services.Data.Families.Contracts;
-using Plant_A_Plant.Services.Data.Plants.Contracts;
 using Plant_A_Plant.Services.Data.Plants;
+using Plant_A_Plant.Services.Data.Plants.Contracts;
 using Plant_A_Plant.Services.Mapping;
 using Plant_A_Plant.ViewModels;
 
-namespace Plant_A_Plant
+namespace Plant_A_Plant.Web
 {
     public class Startup
     {

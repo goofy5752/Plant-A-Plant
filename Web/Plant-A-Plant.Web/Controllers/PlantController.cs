@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Plant_A_Plant.Services.Data.Plants.Contracts;
 using Plant_A_Plant.ViewModels.Plants;
 
-namespace Plant_A_Plant.Controllers
+namespace Plant_A_Plant.Web.Controllers
 {
-    using Microsoft.AspNetCore.Mvc;
-
     public class PlantController : Controller
     {
         private readonly IPlantsService _service;

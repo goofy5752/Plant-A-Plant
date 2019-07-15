@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Plant_A_Plant.ViewModels;
 
-namespace Plant_A_Plant.Controllers
+namespace Plant_A_Plant.Web.Controllers
 {
     public class HomeController : Controller
     {

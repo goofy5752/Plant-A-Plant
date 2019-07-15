@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>Plant_A_Plant.Services.Data</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Web\Plant-A-Plant.ViewModels\Plant-A-Plant.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>
