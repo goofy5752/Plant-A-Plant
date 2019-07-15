@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Web\Plant-A-Plant.ViewModels\Plant-A-Plant.ViewModels.csproj" />
+    <ProjectReference Include="..\..\Web\Plant-A-Plant.Web.ViewModels\Plant-A-Plant.Web.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>

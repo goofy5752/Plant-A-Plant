@@ -17,7 +17,7 @@ using Plant_A_Plant.Services.Data.Families.Contracts;
 using Plant_A_Plant.Services.Data.Plants;
 using Plant_A_Plant.Services.Data.Plants.Contracts;
 using Plant_A_Plant.Services.Mapping;
-using Plant_A_Plant.ViewModels;
+using Plant_A_Plant.Web.ViewModels;
 
 namespace Plant_A_Plant.Web
 {

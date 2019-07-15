@@ -5,7 +5,7 @@
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
-    using Plant_A_Plant.ViewModels.Families;
+    using Plant_A_Plant.Web.ViewModels.Families;
     using Plant_A_Plant.Data.Models;
     using Plant_A_Plant.Data.Common.Repositories;
     using Mapping;

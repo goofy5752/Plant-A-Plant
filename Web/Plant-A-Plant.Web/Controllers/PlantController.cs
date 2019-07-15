@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Plant_A_Plant.Services.Data.Plants.Contracts;
-using Plant_A_Plant.ViewModels.Plants;
+using Plant_A_Plant.Web.ViewModels.Plants;
 
 namespace Plant_A_Plant.Web.Controllers
 {

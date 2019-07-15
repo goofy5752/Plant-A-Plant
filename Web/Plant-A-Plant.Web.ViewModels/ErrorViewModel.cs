@@ -1,4 +1,4 @@
-namespace Plant_A_Plant.ViewModels
+namespace Plant_A_Plant.Web.ViewModels
 {
     public class ErrorViewModel
     {

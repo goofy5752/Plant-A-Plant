@@ -1,9 +1,9 @@
-﻿namespace Plant_A_Plant.ViewModels.Plants
-{
-    using System;
-    using Data.Models;
-    using Services.Mapping;
+﻿using System;
+using Plant_A_Plant.Data.Models;
+using Plant_A_Plant.Services.Mapping;
 
+namespace Plant_A_Plant.Web.ViewModels.Plants
+{
     public class PlantDetailsViewModel : IMapFrom<Plant>
     {
         public Guid Id { get; set; }

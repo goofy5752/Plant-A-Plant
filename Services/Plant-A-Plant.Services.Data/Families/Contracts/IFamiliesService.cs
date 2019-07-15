@@ -4,7 +4,7 @@
     using System.Threading.Tasks;
     using System.Collections.Generic;
 
-    using Plant_A_Plant.ViewModels.Families;
+    using Plant_A_Plant.Web.ViewModels.Families;
 
     public interface IFamiliesService
     {

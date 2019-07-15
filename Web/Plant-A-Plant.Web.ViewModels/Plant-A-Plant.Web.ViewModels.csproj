@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RootNamespace>Plant_A_Plant.ViewModels</RootNamespace>
+    <RootNamespace>Plant_A_Plant.Web.ViewModels</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

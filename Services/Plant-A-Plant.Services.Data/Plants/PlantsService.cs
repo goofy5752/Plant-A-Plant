@@ -8,7 +8,7 @@
     using Contracts;
     using Plant_A_Plant.Data.Common.Repositories;
     using Plant_A_Plant.Data.Models;
-    using Plant_A_Plant.ViewModels.Plants;
+    using Plant_A_Plant.Web.ViewModels.Plants;
     using Mapping;
 
     public class PlantsService : IPlantsService

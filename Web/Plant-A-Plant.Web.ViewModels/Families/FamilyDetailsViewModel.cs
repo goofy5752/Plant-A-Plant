@@ -1,10 +1,9 @@
-﻿namespace Plant_A_Plant.ViewModels.Families
+﻿using System;
+using Plant_A_Plant.Data.Models;
+using Plant_A_Plant.Services.Mapping;
+
+namespace Plant_A_Plant.Web.ViewModels.Families
 {
-    using System;
-
-    using Data.Models;
-    using Services.Mapping;
-
     public class FamilyDetailsViewModel : IMapFrom<Family>
     {
         public Guid Id { get; set; }

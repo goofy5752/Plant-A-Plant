@@ -1,12 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Plant_A_Plant.Data.Models;
+using Plant_A_Plant.Services.Mapping;
 
-namespace Plant_A_Plant.ViewModels.Plants
+namespace Plant_A_Plant.Web.ViewModels.Plants
 {
-    using System;
-    using Data.Models;
-    using Plant_A_Plant.Data.Models;
-    using Services.Mapping;
-
     public class CreatePlantViewModel : IMapFrom<Plant>
     {
         public CreatePlantViewModel()

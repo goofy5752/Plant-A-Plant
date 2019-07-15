@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Plant_A_Plant.ViewModels;
+using Plant_A_Plant.Web.ViewModels;
 
 namespace Plant_A_Plant.Web.Controllers
 {

@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using Plant_A_Plant.ViewModels.Plants;
+    using Plant_A_Plant.Web.ViewModels.Plants;
 
     public interface IPlantsService
     {
