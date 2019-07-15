@@ -65,8 +65,10 @@ namespace Plant_A_Plant.Web
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            // Application services
             services.AddTransient<IPlantsService, PlantsService>();
             services.AddTransient<IFamiliesService, FamiliesService>();
+            services.AddScoped<SignInManager<PaPUser>, SignInManager<PaPUser>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
