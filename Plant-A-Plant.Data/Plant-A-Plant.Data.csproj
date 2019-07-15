@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RootNamespace>Plant_A_Plant.Data</RootNamespace>
+    <RootNamespace>Plant-A-Plant.Data</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

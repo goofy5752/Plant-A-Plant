@@ -1,8 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RootNamespace>Plant_A_Plant.Service.Mapping</RootNamespace>
-  </PropertyGroup>
-
-</Project>
