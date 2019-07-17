@@ -12,6 +12,7 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="SendGrid" Version="9.11.0" />
   </ItemGroup>
 
 
@@ -20,6 +21,13 @@
     <ProjectReference Include="..\..\Data\Plant-A-Plant.Data.Models\Plant-A-Plant.Data.Models.csproj" />
     <ProjectReference Include="..\..\Data\Plant-A-Plant.Data\Plant-A-Plant.Data.csproj" />
     <ProjectReference Include="..\..\Services\Plant-A-Plant.Services.Data\Plant-A-Plant.Services.Data.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Content Update="wwwroot\favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plant-A-Plant.Web.ViewModel
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plant-A-Plant.Web.Infrastructure", "Web\Plant-A-Plant.Web.Infrastructure\Plant-A-Plant.Web.Infrastructure.csproj", "{B9053439-4B22-4079-9612-20EEABB92A80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plant-A-Plant.Services.Messaging", "Services\Plant-A-Plant.Services.Messaging\Plant-A-Plant.Services.Messaging.csproj", "{0D088B3C-FA22-4268-89B1-FC46498DB631}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{B9053439-4B22-4079-9612-20EEABB92A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9053439-4B22-4079-9612-20EEABB92A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9053439-4B22-4079-9612-20EEABB92A80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D088B3C-FA22-4268-89B1-FC46498DB631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D088B3C-FA22-4268-89B1-FC46498DB631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D088B3C-FA22-4268-89B1-FC46498DB631}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D088B3C-FA22-4268-89B1-FC46498DB631}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +88,7 @@ Global
 		{56846EEC-9C1D-4F8C-B103-BAC391DE2821} = {F2B3C871-807F-488D-B974-DBB2DC89D44B}
 		{A618CE20-E4E4-4110-9AC8-41775E786F71} = {7E81AD33-BF7D-4EEF-87A4-2336820342D0}
 		{B9053439-4B22-4079-9612-20EEABB92A80} = {7E81AD33-BF7D-4EEF-87A4-2336820342D0}
+		{0D088B3C-FA22-4268-89B1-FC46498DB631} = {F2B3C871-807F-488D-B974-DBB2DC89D44B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F0162FA7-373B-432C-A71D-EF763579FEBD}
