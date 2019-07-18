@@ -62,12 +62,12 @@ namespace Plant_A_Plant.Web
                 options.User.RequireUniqueEmail = true;
             });
 
-            services.AddAuthentication()
-                .AddFacebook(facebookOptions =>
-                {
-                    facebookOptions.AppId = "477890316322987";
-                    facebookOptions.AppSecret = "d8c1c6f08178abf0de96dd4babd22fc4";
-                });
+            //services.AddAuthentication()
+            //    .AddFacebook(facebookOptions =>
+            //    {
+            //        facebookOptions.AppId = "AppId";
+            //        facebookOptions.AppSecret = "AppSecretId";
+            //    });
 
             // Data repositories
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
