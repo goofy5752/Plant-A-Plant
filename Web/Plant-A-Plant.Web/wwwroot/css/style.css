@@ -516,7 +516,6 @@ background-color: #212121;
   position: absolute;
   width: 100%;
   padding: 1em 2em;
-  box-shadow: 0 0 4px #969595;
 }
 
 .style-banner {
@@ -1565,5 +1564,5 @@ color:#fff;
   }
 }
 
-
 /*--//responsive--*/
+

@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using System.Linq;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -43,6 +44,7 @@ namespace Plant_A_Plant.Web
             services.AddDbContext<PaPDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddIdentity<PaPUser, IdentityRole>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<PaPDbContext>()
@@ -60,15 +62,22 @@ namespace Plant_A_Plant.Web
                 options.User.RequireUniqueEmail = true;
             });
 
+            services.AddAuthentication()
+                .AddFacebook(facebookOptions =>
+                {
+                    facebookOptions.AppId = "477890316322987";
+                    facebookOptions.AppSecret = "d8c1c6f08178abf0de96dd4babd22fc4";
+                });
+
             // Data repositories
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             // Application services
             services.AddTransient<IPlantsService, PlantsService>();
             services.AddTransient<IFamiliesService, FamiliesService>();
             services.AddScoped<SignInManager<PaPUser>, SignInManager<PaPUser>>();
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -76,21 +85,36 @@ namespace Plant_A_Plant.Web
         {
             AutoMapperConfig.RegisterMappings(typeof(ErrorViewModel).GetTypeInfo().Assembly);
 
-            if (env.IsDevelopment())
+            using (var serviceScope = app.ApplicationServices.CreateScope())
             {
-                app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
+                using (var context = serviceScope.ServiceProvider.GetRequiredService<PaPDbContext>())
+                {
+                    context.Database.EnsureCreated();
+
+                    if (!context.Roles.Any())
+                    {
+                        context.Roles.Add(new IdentityRole
+                        {
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        });
+
+                        context.Roles.Add(new IdentityRole
+                        {
+                            Name = "User",
+                            NormalizedName = "USER"
+                        });
+
+                        context.SaveChanges();
+                    }
+                }
             }
 
+            app.UseDeveloperExceptionPage();
+            app.UseDatabaseErrorPage();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseCookiePolicy();
+            app.UseHsts();
 
             app.UseAuthentication();
 
