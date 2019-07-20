@@ -16,7 +16,9 @@ namespace Plant_A_Plant.Data.Models
         [MinLength(3), MaxLength(40)]
         public string Name { get; set; }
 
-        public string Description { get; set; }
+        public string ShortDescription { get; set; }
+
+        public string LongDescription { get; set; }
 
         public TimeSpan EstimatedTimeForGrowing { get; set; }
 

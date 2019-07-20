@@ -12,6 +12,8 @@ namespace Plant_A_Plant.Data.Models
             this.CreatedOn = DateTime.UtcNow;
         }
 
+        public string Name { get; set; }
+
         public string Description { get; set; }
 
         public virtual IEnumerable<Plant> Plants { get; set; }

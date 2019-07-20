@@ -35,7 +35,7 @@
             var plant = new Plant()
             {
                 Name = model.Name,
-                Description = model.Description,
+                ShortDescription = model.ShortDescription,
                 EstimatedTimeForGrowing = model.EstimatedTimeForGrowing,
             };
 

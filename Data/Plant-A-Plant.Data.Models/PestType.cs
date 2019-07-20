@@ -13,7 +13,9 @@ namespace Plant_A_Plant.Data.Models
 
         public string Name { get; set; }
 
-        public string Description { get; set; }
+        public string ShortDescription { get; set; }
+
+        public string LongDescription { get; set; }
 
         public virtual IEnumerable<Pest> Pests { get; set; }
     }
