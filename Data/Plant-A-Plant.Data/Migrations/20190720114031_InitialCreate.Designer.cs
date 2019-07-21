@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Plant_A_Plant.Data;
 
-namespace Plant_A_Plant.Data.Migrations
+namespace PlantAPlant.Data.Migrations
 {
     [DbContext(typeof(PaPDbContext))]
-    [Migration("20190715172145_OverrideIdentityUserName")]
-    partial class OverrideIdentityUserName
+    [Migration("20190720114031_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -166,6 +166,8 @@ namespace Plant_A_Plant.Data.Migrations
 
                     b.Property<DateTime?>("ModifiedOn");
 
+                    b.Property<string>("Name");
+
                     b.HasKey("Id");
 
                     b.ToTable("Families");
@@ -280,13 +282,15 @@ namespace Plant_A_Plant.Data.Migrations
 
                     b.Property<DateTime?>("DeletedOn");
 
-                    b.Property<string>("Description");
-
                     b.Property<bool>("IsDeleted");
+
+                    b.Property<string>("LongDescription");
 
                     b.Property<DateTime?>("ModifiedOn");
 
                     b.Property<string>("Name");
+
+                    b.Property<string>("ShortDescription");
 
                     b.HasKey("Id");
 
@@ -320,8 +324,6 @@ namespace Plant_A_Plant.Data.Migrations
 
                     b.Property<DateTime?>("DeletedOn");
 
-                    b.Property<string>("Description");
-
                     b.Property<TimeSpan>("EstimatedTimeForGrowing");
 
                     b.Property<Guid?>("EventId");
@@ -332,11 +334,15 @@ namespace Plant_A_Plant.Data.Migrations
 
                     b.Property<bool>("IsDeleted");
 
+                    b.Property<string>("LongDescription");
+
                     b.Property<DateTime?>("ModifiedOn");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(40);
+
+                    b.Property<string>("ShortDescription");
 
                     b.HasKey("Id");
 

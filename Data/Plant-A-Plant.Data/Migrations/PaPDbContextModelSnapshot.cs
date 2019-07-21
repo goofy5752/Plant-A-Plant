@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Plant_A_Plant.Data;
 
-namespace Plant_A_Plant.Data.Migrations
+namespace PlantAPlant.Data.Migrations
 {
     [DbContext(typeof(PaPDbContext))]
     partial class PaPDbContextModelSnapshot : ModelSnapshot
