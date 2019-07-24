@@ -40,21 +40,40 @@
                             <input type="submit" id="signin" class="form-submit" value="Log in" />
                         </div>
                     </form>
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-                        <div class="social-login">
-                            <span class="social-label">Or login with</span>
-                            @foreach (var provider in Model.ExternalLogins)
+                    <div class="social-login">
+                        <span class="social-label">Or login with</span>
+                        @{
+                            if ((Model.ExternalLogins?.Count ?? 0) == 0)
                             {
-                                <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account"><i class="display-flex-center zmdi zmdi-facebook"></i></button>
+                                <div>
+                                    <p>
+                                        There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
+                                        for details on setting up this ASP.NET application to support logging in via external services.
+                                    </p>
+                                </div>
                             }
-
-                        </div>
-                        <div class="form-group">
-                            <p>
-                                <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
-                            </p>
-                        </div>
-                    </form>
+                            else
+                            {
+                                <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                                    <div>
+                                        <p>
+                                            @foreach (var provider in Model.ExternalLogins)
+                                            {
+                                                <div class="text-center">
+                                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account"><i class="display-flex-center zmdi zmdi-facebook"></i></button>
+                                                </div>
+                                            }
+                                        </p>
+                                    </div>
+                                </form>
+                            }
+                        }
+                    </div>
+                    <div class="form-group">
+                        <p>
+                            <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
