@@ -15,7 +15,6 @@ namespace Plant_A_Plant.Data.Models
 
         public DateTime RegisteredOn { get; set; }
 
-        [Required]
         public Guid FieldId { get; set; }
         public Field Field { get; set; }
     }

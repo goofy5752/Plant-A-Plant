@@ -9,12 +9,11 @@
         public Event()
         {
             this.CreatedOn = DateTime.UtcNow;
-            this.Plants = new HashSet<Plant>();
         }
 
         public Guid FieldId { get; set; }
         public virtual Field Field { get; set; }
 
-        public virtual IEnumerable<Plant> Plants { get; set; }
+        public virtual IEnumerable<Plant> Plants => new HashSet<Plant>();
     }
 }

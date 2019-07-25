@@ -53,10 +53,6 @@
                 .To<PlantDetailsViewModel>()
                 .Single(x => x.Id == id);
 
-            //var categories = this._moviesCategoriesService.MovieCategories(id);
-
-            //vm.Categories = categories;
-            //vm.Actors = this._moviesActorsService.Actors(vm.Id);
             return vm;
         }
     }

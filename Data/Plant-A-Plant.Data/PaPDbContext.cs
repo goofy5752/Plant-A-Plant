@@ -25,8 +25,6 @@
 
         public DbSet<Family> Families { get; set; }
 
-        public DbSet<PestType> PestTypes { get; set; }
-
         public DbSet<Plant> Plants { get; set; }
 
         public DbSet<Pest> Pests { get; set; }

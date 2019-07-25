@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Plant_A_Plant.Data;
 
 namespace PlantAPlant.Data.Migrations
 {
     [DbContext(typeof(PaPDbContext))]
-    partial class PaPDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190725201736_RefactorEntities")]
+    partial class RefactorEntities
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -288,13 +290,35 @@ namespace PlantAPlant.Data.Migrations
 
                     b.Property<string>("Name");
 
+                    b.Property<Guid?>("PestTypeId");
+
                     b.Property<string>("ShortDescription");
 
                     b.Property<string>("SuperFamily");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("PestTypeId");
+
                     b.ToTable("Pests");
+                });
+
+            modelBuilder.Entity("Plant_A_Plant.Data.Models.PestType", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreatedOn");
+
+                    b.Property<DateTime?>("DeletedOn");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("ModifiedOn");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PestTypes");
                 });
 
             modelBuilder.Entity("Plant_A_Plant.Data.Models.PestsPlants", b =>
@@ -439,6 +463,13 @@ namespace PlantAPlant.Data.Migrations
                         .WithOne("Field")
                         .HasForeignKey("Plant_A_Plant.Data.Models.Field", "EventId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Plant_A_Plant.Data.Models.Pest", b =>
+                {
+                    b.HasOne("Plant_A_Plant.Data.Models.PestType")
+                        .WithMany("Pests")
+                        .HasForeignKey("PestTypeId");
                 });
 
             modelBuilder.Entity("Plant_A_Plant.Data.Models.PestsPlants", b =>

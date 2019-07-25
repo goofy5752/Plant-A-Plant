@@ -8,7 +8,6 @@ namespace Plant_A_Plant.Data.Models
     {
         public Family()
         {
-            this.Plants = new HashSet<Plant>();
             this.CreatedOn = DateTime.UtcNow;
         }
 
@@ -16,6 +15,6 @@ namespace Plant_A_Plant.Data.Models
 
         public string Description { get; set; }
 
-        public virtual IEnumerable<Plant> Plants { get; set; }
+        public virtual IEnumerable<Plant> Plants => new HashSet<Plant>();
     }
 }
