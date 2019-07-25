@@ -38,7 +38,7 @@ namespace Plant_A_Plant.Web.Controllers
         [HttpPost]
         public IActionResult Contact(ContactViewModel model)
         {
-            if (!TryValidateModel(model))
+            if (!ModelState.IsValid)
             {
                 return this.View(model);
             }
