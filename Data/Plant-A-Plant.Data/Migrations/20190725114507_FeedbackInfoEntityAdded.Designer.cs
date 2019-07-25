@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Plant_A_Plant.Data;
 
 namespace PlantAPlant.Data.Migrations
 {
     [DbContext(typeof(PaPDbContext))]
-    partial class PaPDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190725114507_FeedbackInfoEntityAdded")]
+    partial class FeedbackInfoEntityAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -169,26 +171,6 @@ namespace PlantAPlant.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Families");
-                });
-
-            modelBuilder.Entity("Plant_A_Plant.Data.Models.FeedbackInfo", b =>
-                {
-                    b.Property<string>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("FullName");
-
-                    b.Property<string>("Message");
-
-                    b.Property<DateTime>("SendOn");
-
-                    b.Property<string>("SenderEmail");
-
-                    b.Property<string>("SenderPhoneNumber");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Feedback");
                 });
 
             modelBuilder.Entity("Plant_A_Plant.Data.Models.Field", b =>

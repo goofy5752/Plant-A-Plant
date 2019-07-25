@@ -80,7 +80,7 @@ namespace Plant_A_Plant.Web.Areas.Identity.Pages.Account
                 else
                 {
                     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                    return Page();
+                    return Redirect("/Identity/Account/Login");
                 }
             }
 

@@ -19,6 +19,8 @@
 
         public DbSet<Field> Fields { get; set; }
 
+        public DbSet<FeedbackInfo> Feedback { get; set; }
+
         public DbSet<Event> Events { get; set; }
 
         public DbSet<Family> Families { get; set; }

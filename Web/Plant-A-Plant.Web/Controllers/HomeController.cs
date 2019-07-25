@@ -1,11 +1,20 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Plant_A_Plant.Services.Data.Contacts.Contracts;
 using Plant_A_Plant.Web.ViewModels;
+using Plant_A_Plant.Web.ViewModels.Contacts;
 
 namespace Plant_A_Plant.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IContactService _contactService;
+
+        public HomeController(IContactService contactService)
+        {
+            _contactService = contactService;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -16,13 +25,26 @@ namespace Plant_A_Plant.Web.Controllers
             return View();
         }
 
-        public IActionResult Services()
+        public IActionResult Service()
         {
             return this.View();
         }
 
-        public IActionResult Contacts()
+        public IActionResult Contact()
         {
+            return this.View();
+        }
+
+        [HttpPost]
+        public IActionResult Contact(ContactViewModel model)
+        {
+            if (!TryValidateModel(model))
+            {
+                return this.View(model);
+            }
+
+            this._contactService.RegisterFeedBack(model.FullName, model.Message, model.SenderEmail, model.SenderPhoneNumber);
+
             return this.View();
         }
 

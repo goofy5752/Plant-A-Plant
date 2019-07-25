@@ -1,17 +1,7 @@
-﻿
+﻿@model Plant_A_Plant.Web.ViewModels.Contacts.ContactViewModel
 @{
-    ViewData["Title"] = "Contacts";
+    ViewData["Title"] = "Contact";
 }
-
-<script>
-    addEventListener("load", function () {
-        setTimeout(hideURLbar, 0);
-    }, false);
-
-    function hideURLbar() {
-        window.scrollTo(0, 1);
-    }
-</script>
 
 <!--//meta tags ends here-->
 <!--booststrap-->
@@ -38,19 +28,24 @@
                 </div>
                 <!--contact-map -->
                 <div class="col-lg-6 col-md-6 contact-form-txt">
-                    <form action="#" method="post">
+                    <form asp-controller="Home" asp-action="Contact" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <div class="w3pvt-wls-contact-mid">
                             <div class="form-group contact-forms">
-                                <input type="text" class="form-control" placeholder="Name" required="">
+                                <input asp-for="@Model.FullName" type="text" class="form-control" placeholder="Full Name">
+                                <span asp-validation-for="@Model.FullName" class="text-danger"></span>
                             </div>
                             <div class="form-group contact-forms">
-                                <input type="email" class="form-control" placeholder="Email" required="">
+                                <input asp-for="@Model.SenderEmail" type="text" class="form-control" placeholder="Email">
+                                <span asp-validation-for="@Model.SenderEmail" class="text-danger"></span>
                             </div>
                             <div class="form-group contact-forms">
-                                <input type="text" class="form-control" placeholder="Phone" required="">
+                                <input asp-for="@Model.SenderPhoneNumber" type="text" class="form-control" placeholder="Phone">
+                                <span asp-validation-for="@Model.SenderPhoneNumber" class="text-danger"></span>
                             </div>
                             <div class="form-group contact-forms">
-                                <textarea class="form-control" placeholder="Message" rows="3" required=""></textarea>
+                                <textarea asp-for="@Model.Message" type="text" class="form-control" rows="3" placeholder="Message"></textarea>
+                                <span asp-validation-for="@Model.Message" class="text-danger"></span>
                             </div>
                             <button type="submit" class="btn sent-butnn">Send</button>
                         </div>
@@ -88,3 +83,8 @@
         </div>
     </section>
 </div>
+
+@section Scripts {
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <partial name="_ValidationScriptsPartial" />
+}

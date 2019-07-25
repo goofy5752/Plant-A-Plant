@@ -13,6 +13,8 @@ using Plant_A_Plant.Data;
 using Plant_A_Plant.Data.Common.Repositories;
 using Plant_A_Plant.Data.Models;
 using Plant_A_Plant.Data.Repositories;
+using Plant_A_Plant.Services.Data.Contacts;
+using Plant_A_Plant.Services.Data.Contacts.Contracts;
 using Plant_A_Plant.Services.Data.Families;
 using Plant_A_Plant.Services.Data.Families.Contracts;
 using Plant_A_Plant.Services.Data.Plants;
@@ -75,6 +77,7 @@ namespace Plant_A_Plant.Web
             // Application services
             services.AddTransient<IPlantsService, PlantsService>();
             services.AddTransient<IFamiliesService, FamiliesService>();
+            services.AddTransient<IContactService, ContactsService>();
             services.AddScoped<SignInManager<PaPUser>, SignInManager<PaPUser>>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
