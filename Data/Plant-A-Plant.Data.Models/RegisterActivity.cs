@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 using Plant_A_Plant.Data.Common.Models;
 
 namespace Plant_A_Plant.Data.Models

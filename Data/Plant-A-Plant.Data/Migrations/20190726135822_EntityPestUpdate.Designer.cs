@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Plant_A_Plant.Data;
 
 namespace PlantAPlant.Data.Migrations
 {
     [DbContext(typeof(PaPDbContext))]
-    partial class PaPDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190726135822_EntityPestUpdate")]
+    partial class EntityPestUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -288,31 +290,15 @@ namespace PlantAPlant.Data.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<string>("PestImgUrl");
-
                     b.Property<string>("ShortDescription");
 
                     b.Property<string>("SuperFamily");
-
-                    b.Property<Guid?>("TypeId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("TypeId");
-
-                    b.ToTable("Pests");
-                });
-
-            modelBuilder.Entity("Plant_A_Plant.Data.Models.PestType", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
 
                     b.Property<int>("Type");
 
                     b.HasKey("Id");
 
-                    b.ToTable("PestTypes");
+                    b.ToTable("Pests");
                 });
 
             modelBuilder.Entity("Plant_A_Plant.Data.Models.PestsPlants", b =>
@@ -457,13 +443,6 @@ namespace PlantAPlant.Data.Migrations
                         .WithOne("Field")
                         .HasForeignKey("Plant_A_Plant.Data.Models.Field", "EventId")
                         .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Plant_A_Plant.Data.Models.Pest", b =>
-                {
-                    b.HasOne("Plant_A_Plant.Data.Models.PestType", "Type")
-                        .WithMany()
-                        .HasForeignKey("TypeId");
                 });
 
             modelBuilder.Entity("Plant_A_Plant.Data.Models.PestsPlants", b =>

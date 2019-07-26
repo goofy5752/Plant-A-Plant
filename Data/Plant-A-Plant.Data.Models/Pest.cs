@@ -12,6 +12,10 @@ namespace Plant_A_Plant.Data.Models
 
         public string ShortDescription { get; set; }
 
+        public PestType Type { get; set; }
+
+        public string PestImgUrl { get; set; }
+
         public virtual IEnumerable<PestsPlants> PestsPlants => new HashSet<PestsPlants>();
     }
 }

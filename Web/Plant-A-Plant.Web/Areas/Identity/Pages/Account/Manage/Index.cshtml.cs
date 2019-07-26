@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Plant_A_Plant.Data;
-using Plant_A_Plant.Data.Common.Repositories;
 using Plant_A_Plant.Data.Models;
 
 namespace Plant_A_Plant.Web.Areas.Identity.Pages.Account.Manage
