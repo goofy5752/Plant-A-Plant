@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Plant_A_Plant.Data.Models;
+using Plant_A_Plant.Data.Models.Enums;
 using Plant_A_Plant.Services.Mapping;
 
 namespace Plant_A_Plant.Web.ViewModels.Pests
@@ -12,7 +13,7 @@ namespace Plant_A_Plant.Web.ViewModels.Pests
 
         public string ShortDescription { get; set; }
 
-        public PestType Type { get; set; }
+        public PestTypes Type { get; set; }
 
         public string PestImgUrl { get; set; }
 

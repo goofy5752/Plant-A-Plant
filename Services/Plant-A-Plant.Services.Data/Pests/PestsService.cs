@@ -28,7 +28,6 @@ namespace Plant_A_Plant.Services.Data.Pests
                 PestImgUrl = model.PestImgUrl,
                 ShortDescription = model.ShortDescription,
                 SuperFamily = model.SuperFamily,
-                Type = model.Type
             };
 
             await this._pestRepository.AddAsync(pest);

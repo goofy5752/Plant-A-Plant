@@ -31,8 +31,6 @@
 
         public DbSet<PestsPlants> PestsPlants { get; set; }
 
-        public DbSet<PestType> PestTypes { get; set; }
-
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
