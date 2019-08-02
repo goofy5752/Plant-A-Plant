@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Plant_A_Plant.Data.Models.FeedbackInfo>
+
+@{
+    ViewData["Title"] = "Default";
+}
+
+<table class="table align-content-center">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SenderEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SenderPhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Message)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SendOn)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SenderEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SenderPhoneNumber)
+                </td>
+                <td>
+                    @{
+                        if (item.Message.Length < 100)
+                        {
+                            @Html.DisplayFor(modelItem => item.Message)
+                        }
+                        else
+                        {
+                            var modelMessage = item.Message.Substring(0, 100);
+                            @Html.DisplayFor(modelItem => modelMessage)
+                        }
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SendOn)
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Plant_A_Plant.Web.ViewModels.Pests;
-using Plant_A_Plant.Web.ViewModels.Plants;
 
 namespace Plant_A_Plant.Services.Data.Pests.Contracts
 {
