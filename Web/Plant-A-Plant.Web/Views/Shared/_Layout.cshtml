@@ -19,16 +19,6 @@
         <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true" />
     </environment>
 
-    <script>
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
-
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
-
     <!--//meta tags ends here-->
     <!--booststrap-->
     <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
@@ -51,12 +41,12 @@
 
 </head>
 <body>
-    <div class="headder-top">
+    <div class="headder-top container-fluid">
         <div id="logo">
-            <a class="nav-link" asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" width="60px" /></a>
+            <a class="nav-link" asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" width="60" /></a>
         </div>
         <!-- nav -->
-        <nav>
+        <nav class="container-fluid">
             <label for="drop" class="toggle" id="onLabel">Menu</label>
             <input type="checkbox" id="drop">
             <ul class="menu mt-2 float-left">
@@ -69,22 +59,6 @@
                 <li>
                     <a class="nav-link" asp-controller="Home" asp-action="Service">Services</a>
                 </li>
-                <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
-                    <!-- First Tier Drop Down -->
-                    <label for="drop-2" class="toggle toogle-2">
-                        Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
-                    </label>
-                    <a href="#">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                    <input type="checkbox" id="drop-2">
-                    <ul>
-                        <li>
-                            <a href="gallery.html" class="drop-text">Gallery</a>
-                        </li>
-                        <li>
-                            <a href="blog.html" class="drop-text">Blog</a>
-                        </li>
-                    </ul>
-                </li>
                 <li>
                     <a class="nav-link" asp-controller="Home" asp-action="Contact">Contact Us</a>
                 </li>
@@ -94,43 +68,58 @@
                 {
                     @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
                     {
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="Identity" asp-page="/Account/Manage/Index" title="Admin Panel">Admin Panel</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Pest" asp-action="Create">Create pest</a>
+                        <li class="nav-item mx-lg-3 mx-md-2 my-md-0 my-1">
+                            <label for="drop-2" class="toggle toogle-2">
+                                Admin panel <span class="fa fa-angle-down" aria-hidden="true"></span>
+                            </label>
+                            <a asp-controller="Home" asp-action="Index">Admin panel <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2">
+                            <ul>
+                                <li>
+                                    <a class="nav-link" asp-controller="FeedbackInfo" asp-action="Index">Feedbacks</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" asp-controller="Pest" asp-action="Create">Add pest</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" asp-controller="Family" asp-action="Create">Add family</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" asp-controller="Plant" asp-action="Create">Add plant</a>
+                                </li>
+                            </ul>
                         </li>
                     }
-                    <li class="nav-item">
-                        <a class="nav-link text-light" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name!</a>
+                    <li class="nav-item mx-lg-3 mx-md-2 my-md-0 my-1">
+                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name!</a>
                     </li>
-                    <li class="nav-item">
-                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home" , new {area="" })">
-                            <button type="submit" class="nav-link btn btn-link text-light">Logout</button>
+                    <li class="nav-item mx-lg-3 mx-md-2 my-md-0 my-1">
+                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new {area = ""})">
+                            <button type="submit" class="nav-link">Logout</button>
                         </form>
                     </li>
                 }
                 else
                 {
                     <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
-                        <a class="nav-link text-light" asp-area="Identity" asp-page="/Account/Register">Register</a>
+                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Register</a>
                     </li>
                     <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
-                        <a class="nav-link text-light" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                        <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Login</a>
                     </li>
                 }
             </ul>
         </nav>
         <!-- //nav -->
+        <a name="top"></a>
     </div>
-    <a name="top"></a>
     @RenderBody()
     <!-- footer -->
     <footer class="py-lg-2 py-md-3 py-sm-3 py-3">
         <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
             <div class="text-center">
                 <h2>
-                    <a asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" width="80px" /></a>
+                    <a asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" width="80" /></a>
                 </h2>
             </div>
 

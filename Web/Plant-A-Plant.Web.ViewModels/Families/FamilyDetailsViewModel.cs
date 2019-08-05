@@ -8,6 +8,8 @@ namespace Plant_A_Plant.Web.ViewModels.Families
     {
         public Guid Id { get; set; }
 
+        public string Name { get; set; }
+
         public string Description { get; set; }
     }
 }

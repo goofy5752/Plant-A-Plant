@@ -16,10 +16,10 @@ namespace Plant_A_Plant.Web.Controllers
             _familiesService = familiesService;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
 
         public IActionResult Create()
         {

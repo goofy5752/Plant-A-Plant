@@ -225,10 +225,10 @@ nav ul li {
 /* Styling the links */
 
 nav ul li a {
-  color: #fff;
+  color: aquamarine;
   text-transform: capitalize;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 2px;
   background: transparent;
   padding: 7px 20px;
@@ -240,12 +240,28 @@ nav ul li a {
   -ms-transition: 0.5s all;
 }
 
+nav ul li button {
+        color: aquamarine;
+        text-transform: capitalize;
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 2px;
+        background: transparent;
+        padding: 7px 20px;
+        display: inline-block;
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        -o-transition: 0.5s all;
+        -ms-transition: 0.5s all;
+    }
+
 nav ul li ul li:hover {
   background: #000;
 }
 
 .menu li .drop-text:hover {
-  color: #fff;
+  color: black;
   border: none;
 }
 
@@ -257,7 +273,7 @@ nav ul li ul li:hover {
 
 .menu li a:hover {
   opacity: 0.8;
-  color: #fff;
+  color: gray;
   transition: 0.5s all;
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
@@ -1566,3 +1582,6 @@ color:#fff;
 
 /*--//responsive--*/
 
+.separate-bd {
+    margin-top: 75px!important;
+}

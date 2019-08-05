@@ -3,7 +3,11 @@
     ViewData["Title"] = "FamilyDetails";
 }
 
-@foreach (var item in Model)
-{
-    <div>@item.Id - @item.Description</div>
-}
+<section class="about py-lg-4 py-md-3 py-sm-3 py-3">
+    <div class="container-fluid separate-bd">
+        @foreach (var item in Model)
+        {
+            <span>@item.Name - @item.Description</span>
+        }
+    </div>
+</section>

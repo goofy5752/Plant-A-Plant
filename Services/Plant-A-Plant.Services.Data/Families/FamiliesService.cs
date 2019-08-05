@@ -24,6 +24,7 @@
         {
             var family = new Family()
             {
+                Name = model.Name,
                 Description = model.Description
             };
 
